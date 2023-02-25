@@ -65,7 +65,12 @@ const cb = Math.floor(powerful);
 const account = data.advertisertId;
 
 // use the provided APIs to create the pixel call
-const url = 'https://px.mountain.com/sti?shaid=' + encodeUriComponent(account) + "&cb=" + encodeUriComponent(cb) + "&plh=" + plh();
+const url = "https://px.mountain.com/sti?" +
+            "shaid=" + encodeUriComponent(account) + 
+            "&cb=" + encodeUriComponent(cb) + 
+            "&plh=" + encodeUriComponent(plh()) + 
+            "&tdr=" + encodeUriComponent(tdr())
+            );
 
 
 injectScript(url, data.gtmOnSuccess, data.gtmOnFailure);
