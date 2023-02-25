@@ -69,8 +69,7 @@ const url = "https://px.mountain.com/sti?" +
             "shaid=" + encodeUriComponent(account) + 
             "&cb=" + encodeUriComponent(cb) + 
             "&plh=" + encodeUriComponent(plh()) + 
-            "&tdr=" + encodeUriComponent(tdr())
-            );
+            "&tdr=" + encodeUriComponent(tdr());
 
 
 injectScript(url, data.gtmOnSuccess, data.gtmOnFailure);
