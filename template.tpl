@@ -53,6 +53,7 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 const sendPixel = require('sendPixel');
 const encodeUriComponent = require('encodeUriComponent');
 const plh = require('getUrl');
+const tdr = require('getReferrerUrl');
 const Math = require('Math');
 const injectScript = require('injectScript');
 const logToConsole = require('logToConsole');
