@@ -1,4 +1,4 @@
-___TERMS_OF_SERVICE___
+﻿___TERMS_OF_SERVICE___
 
 By creating or modifying this file you agree to Google Tag Manager's Community
 Template Gallery Developer Terms of Service available at
@@ -14,7 +14,6 @@ ___INFO___
   "version": 1,
   "securityGroups": [],
   "displayName": "MNTN Image Tracking Pixel",
-  "categories": ["ADVERTISING"],
   "brand": {
     "id": "brand_dummy",
     "displayName": "",
@@ -32,15 +31,15 @@ ___TEMPLATE_PARAMETERS___
 [
   {
     "type": "TEXT",
-    "name": "advertisertId",
+    "name": "advertiserId",
     "displayName": "MNTN Advertiser ID ( required )",
     "simpleValueType": true,
     "valueValidators": [
       {
-        "type": "POSITIVE_NUMBER"
+        "type": "NON_EMPTY"
       },
       {
-        "type": "NON_EMPTY"
+        "type": "POSITIVE_NUMBER"
       }
     ]
   }
@@ -97,8 +96,30 @@ ___WEB_PERMISSIONS___
         }
       ]
     },
-    "clientAnnotations": {
-      "isEditedByUser": true
+    "isRequired": true
+  },
+  {
+    "instance": {
+      "key": {
+        "publicId": "get_referrer",
+        "versionId": "1"
+      },
+      "param": [
+        {
+          "key": "urlParts",
+          "value": {
+            "type": 1,
+            "string": "any"
+          }
+        },
+        {
+          "key": "queriesAllowed",
+          "value": {
+            "type": 1,
+            "string": "any"
+          }
+        }
+      ]
     },
     "isRequired": true
   },
@@ -117,9 +138,6 @@ ___WEB_PERMISSIONS___
           }
         }
       ]
-    },
-    "clientAnnotations": {
-      "isEditedByUser": true
     },
     "isRequired": true
   },
@@ -156,9 +174,6 @@ ___WEB_PERMISSIONS___
         }
       ]
     },
-    "clientAnnotations": {
-      "isEditedByUser": true
-    },
     "isRequired": true
   }
 ]
@@ -171,6 +186,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 12/21/2022, 5:03:47 PM
+Created on 4/11/2023, 8:13:35 AM
 
 
